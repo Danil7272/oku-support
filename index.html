@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ОСНОВНЫЕ SEO-ТЕГИ -->
+    <title>ОКУ - Компьютерная поддержка | Ремонт компьютеров в Москве | IT услуги</title>
+    <meta name="description" content="✅ Профессиональная компьютерная поддержка ОКУ. Ремонт компьютеров, установка ПО, настройка сетей. Быстрая помощь через Telegram. Работаем в Москве и онлайн.">
+    <meta name="keywords" content="ОКУ, компьютерная поддержка, ремонт компьютеров, IT услуги, настройка компьютера, удаленная помощь, установка Windows, лечение вирусов, настройка интернета">
+    
+    <!-- ДОПОЛНИТЕЛЬНЫЕ META-ТЕГИ -->
+    <meta name="author" content="ОКУ Компьютерная поддержка">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Russian">
+    
+    <!-- OPEN GRAPH (для соцсетей) -->
+    <meta property="og:title" content="ОКУ - Профессиональная компьютерная поддержка">
+    <meta property="og:description" content="Ремонт компьютеров, установка ПО, настройка сетей. Быстрая помощь через Telegram.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://oku-support.ru">
+    <meta property="og:image" content="https://oku-support.ru/images/logo-og.jpg">
+    
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ОКУ - Компьютерная поддержка">
+    <meta name="twitter:description" content="Профессиональный ремонт компьютеров и IT услуги">
+    
+    <!-- CANONICAL URL -->
+    <link rel="canonical" href="https://oku-support.ru">
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- SCHEMA.ORG STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "ОКУ - Компьютерная поддержка",
+        "description": "Профессиональная компьютерная поддержка и IT услуги",
+        "url": "https://oku-support.ru",
+        "telephone": "+7-999-123-45-67",
+        "email": "support@oku-support.ru",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Москва",
+            "addressCountry": "RU"
+        },
+        "openingHours": "Mo-Fr 09:00-18:00, Sa 10:00-15:00",
+        "serviceType": [
+            "Ремонт компьютеров",
+            "Установка ПО", 
+            "Настройка сетей",
+            "Удаленная поддержка"
+        ],
+        "areaServed": "Москва и Московская область"
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        /* Синяя верхняя полоска */
+        .top-bar {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 8px 0;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        /* Навигация */
+        .navbar {
+            background: #ffffff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h2 {
+            color: #1e3a8a;
+            font-size: 1.8rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #1e3a8a;
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #1e3a8a;
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        /* Главный баннер */
+        .hero {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
+            color: #1e3a8a;
+            padding: 120px 2rem 80px;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .hero-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #4b5563;
+        }
+
+        .cta-button {
+            background: #1e3a8a;
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(30, 58, 138, 0.2);
+        }
+
+        .cta-button:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(30, 58, 138, 0.3);
+        }
+
+        /* Услуги */
+        .services {
+            padding: 80px 2rem;
+            background: #ffffff;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.2rem;
+            color: #1e3a8a;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: #1e3a8a;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #f1f5f9;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .service-card p {
+            color: #64748b;
+        }
+
+        /* Форма поддержки */
+        .support-section {
+            padding: 80px 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #f8fafc;
+            border-radius: 12px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .support-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.7rem;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Open Sans', sans-serif;
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #1e3a8a;
+            box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+        }
+
+        .submit-btn {
+            background: #1e3a8a;
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            width: 100%;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #1d4ed8;
+        }
+
+        .submit-btn:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 80px 2rem;
+            background: #ffffff;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-list {
+            margin-top: 2rem;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #f1f5f9;
+        }
+
+        .faq-item h3 {
+            padding: 1.5rem;
+            background: #f8fafc;
+            color: #1e3a8a;
+            cursor: pointer;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .faq-item h3:hover {
+            background: #f1f5f9;
+        }
+
+        .faq-item h3:after {
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        .faq-item.active h3:after {
+            content: '-';
+        }
+
+        .faq-content {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-content.active {
+            padding: 1.5rem;
+            max-height: 500px;
+        }
+
+        .faq-content ul {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .faq-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Контакты */
+        .contact {
+            padding: 80px 2rem;
+            text-align: center;
+            background: #f8fafc;
+        }
+
+        .contact-info {
+            font-size: 1.2rem;
+            line-height: 2.2;
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        /* Telegram секция */
+        .telegram-section {
+            padding: 80px 2rem;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .telegram-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #f1f5f9;
+        }
+
+        .telegram-icon {
+            font-size: 4rem;
+            color: #0088cc;
+            margin-bottom: 1.5rem;
+        }
+
+        .telegram-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #0088cc;
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            margin-top: 1.5rem;
+        }
+
+        .telegram-btn:hover {
+            background: #0077b5;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 136, 204, 0.3);
+        }
+
+        /* Модальное окно */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            backdrop-filter: blur(2px);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 2.5rem;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .close {
+            position: absolute;
+            right: 1.5rem;
+            top: 1rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #64748b;
+            transition: color 0.3s;
+        }
+
+        .close:hover {
+            color: #1e3a8a;
+        }
+
+        .telegram-modal-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #0088cc;
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            margin-top: 1.5rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .telegram-modal-btn:hover {
+            background: #0077b5;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 136, 204, 0.3);
+        }
+
+        /* Уведомление */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            border-radius: 8px;
+            color: white;
+            font-weight: 600;
+            z-index: 3000;
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .notification.success {
+            background: #10b981;
+            transform: translateX(0);
+        }
+
+        .notification.error {
+            background: #ef4444;
+            transform: translateX(0);
+        }
+
+        /* Футер */
+        footer {
+            background: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            
+            .nav-links {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-links li {
+                margin: 0.5rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .support-form {
+                padding: 1.5rem;
+            }
+            
+            .notification {
+                right: 10px;
+                left: 10px;
+                transform: translateY(-100px);
+            }
+            
+            .notification.success,
+            .notification.error {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Синяя верхняя полоска -->
+    <div class="top-bar">ОКУ</div>
+
+    <!-- Навигация -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h2>ОКУ IT Support</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#support">Поддержка</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#telegram">Telegram</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Главный баннер -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>ОКУ - Профессиональная компьютерная поддержка</h1>
+            <p>Ремонт компьютеров, установка ПО, настройка сетей в Москве. Быстрое решение IT-проблем для бизнеса и дома. Гарантия качества.</p>
+            <button class="cta-button" onclick="openSupportModal()">Написать в Telegram</button>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="services">
+        <h2 class="section-title">Наши услуги</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Ремонт компьютеров</h3>
+                <p>Диагностика и ремонт ПК, ноутбуков, моноблоков. Замена комплектующих, чистка от пыли, профилактика.</p>
+            </div>
+            <div class="service-card">
+                <h3>Установка ПО</h3>
+                <p>Установка и настройка операционных систем, офисных программ, специализированного программного обеспечения.</p>
+            </div>
+            <div class="service-card">
+                <h3>Удаленная поддержка</h3>
+                <p>Решение проблем через удаленный доступ. Быстрая помощь без визита специалиста.</p>
+            </div>
+            <div class="service-card">
+                <h3>Сеть и интернет</h3>
+                <p>Настройка локальных сетей, Wi-Fi роутеров, подключение к интернету, устранение неполадок.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма поддержки -->
+    <section id="support" class="support-section">
+        <h2 class="section-title">Онлайн поддержка</h2>
+        <div class="support-form">
+            <div class="form-group">
+                <label for="issue-type">Тип проблемы:</label>
+                <select id="issue-type">
+                    <option value="">Выберите тип проблемы</option>
+                    <option value="hardware">Аппаратные проблемы</option>
+                    <option value="software">Программные проблемы</option>
+                    <option value="network">Проблемы с сетью</option>
+                    <option value="virus">Вирусы и безопасность</option>
+                    <option value="other">Другое</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="issue-description">Описание проблемы:</label>
+                <textarea id="issue-description" rows="5" placeholder="Подробно опишите вашу проблему..."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="contact-info">Ваш Telegram username:</label>
+                <input type="text" id="contact-info" placeholder="@username (обязательно)">
+            </div>
+            <div class="form-group">
+                <label for="user-name">Ваше имя:</label>
+                <input type="text" id="user-name" placeholder="Как к вам обращаться?">
+            </div>
+            <button onclick="submitSupportRequest()" class="submit-btn" id="submit-btn">Отправить заявку в Telegram</button>
+            <button type="button" class="submit-btn" style="margin-top: 10px; background: #0088cc;" onclick="copyToTelegram()">Скопировать текст для Telegram</button>
+        </div>
+    </section>
+
+    <!-- Telegram секция -->
+    <section id="telegram" class="telegram-section">
+        <h2 class="section-title">Свяжитесь с нами в Telegram</h2>
+        <div class="telegram-container">
+            <div class="telegram-icon">
+                <i class="fab fa-telegram"></i>
+            </div>
+            <h3>Быстрая связь через Telegram</h3>
+            <p>Напишите нам в Telegram для мгновенной консультации и оперативного решения ваших IT-проблем. Мы отвечаем быстро!</p>
+            <a href="https://t.me/OKU_support" class="telegram-btn" target="_blank">
+                <i class="fab fa-telegram"></i> Написать @OKU_support
+            </a>
+            <p style="margin-top: 15px; font-size: 0.9rem; color: #6b7280;">
+                Или просто напишите нам напрямую: <strong>@OKU_support</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- Часто задаваемые вопросы -->
+    <section id="faq" class="faq">
+        <h2 class="section-title">Частые проблемы и решения</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <h3 onclick="toggleFAQ(this)">Компьютер не включается</h3>
+                <div class="faq-content">
+                    <p>Проверьте:</p>
+                    <ul>
+                        <li>Подключение к электросети</li>
+                        <li>Работу розетки</li>
+                        <li>Кнопку включения на блоке питания</li>
+                        <li>Кабель питания системного блока</li>
+                        <li>Батарею ноутбука</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFAQ(this)">Медленная работа системы</h3>
+                <div class="faq-content">
+                    <p>Рекомендации:</p>
+                    <ul>
+                        <li>Очистите временные файлы с помощью Disk Cleanup</li>
+                        <li>Проверьте автозагрузку и отключите ненужные программы</li>
+                        <li>Обновите драйверы устройств</li>
+                        <li>Проверьте компьютер на вирусы</li>
+                        <li>Увеличьте объем оперативной памяти</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Контакты</h2>
+        <div class="contact-info">
+            <p><i class="fab fa-telegram"></i> Telegram: @OKU_support</p>
+            <p>✉️ Email: support@oku-support.ru</p>
+            <p>📞 Телефон: +7 (999) 123-45-67</p>
+            <p>🕒 Время работы: Пн-Пт 9:00-18:00, Сб 10:00-15:00</p>
+            <p>📍 Адрес: г. Москва</p>
+        </div>
+    </section>
+
+    <!-- Модальное окно -->
+    <div id="supportModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSupportModal()">&times;</span>
+            <h3>Напишите нам в Telegram</h3>
+            <p>Для быстрой помощи свяжитесь с нами через Telegram</p>
+            <a href="https://t.me/OKU_support" class="telegram-modal-btn" target="_blank">
+                <i class="fab fa-telegram"></i> Написать @OKU_support
+            </a>
+        </div>
+    </div>
+
+    <!-- Уведомление -->
+    <div id="notification" class="notification"></div>
+
+    <!-- Футер -->
+    <footer>
+        <p>ОКУ - Компьютерная поддержка &copy; 2023. Все права защищены.</p>
+    </footer>
+
+    <script>
+        function showNotification(message, type = 'success') {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.className = `notification ${type}`;
+            
+            setTimeout(() => {
+                notification.classList.remove('success', 'error');
+            }, 5000);
+        }
+
+        function submitSupportRequest() {
+            const issueType = document.getElementById('issue-type').value;
+            const issueDescription = document.getElementById('issue-description').value;
+            const contactInfo = document.getElementById('contact-info').value;
+            const userName = document.getElementById('user-name').value;
+            
+            if (!issueType || !issueDescription || !contactInfo) {
+                showNotification('❌ Пожалуйста, заполните все обязательные поля', 'error');
+                return;
+            }
+            
+            if (!contactInfo.startsWith('@')) {
+                showNotification('❌ Введите Telegram username начинающийся с @', 'error');
+                return;
+            }
+            
+            const submitBtn = document.getElementById('submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Подготовка ссылки...';
+            submitBtn.disabled = true;
+            
+            const message = `🆕 Новая заявка в поддержку ОКУ%0A%0A` +
+                           `👤 Имя: ${userName || 'Не указано'}%0A` +
+                           `📱 Telegram: ${contactInfo}%0A` +
+                           `📋 Тип проблемы: ${issueType}%0A` +
+                           `⏰ Время: ${new Date().toLocaleString('ru-RU')}%0A%0A` +
+                           `📝 Описание:%0A${encodeURIComponent(issueDescription)}`;
+            
+            const telegramUrl = `https://t.me/OKU_support?text=${message}`;
+            
+            setTimeout(() => {
+                window.open(telegramUrl, '_blank');
+                showNotification('✅ Ссылка для Telegram создана! Открываю чат...');
+                
+                document.getElementById('issue-type').value = '';
+                document.getElementById('issue-description').value = '';
+                document.getElementById('contact-info').value = '';
+                document.getElementById('user-name').value = '';
+                
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 1000);
+        }
+
+        function copyToTelegram() {
+            const issueType = document.getElementById('issue-type').value;
+            const issueDescription = document.getElementById('issue-description').value;
+            const contactInfo = document.getElementById('contact-info').value;
+            const userName = document.getElementById('user-name').value;
+            
+            if (!issueType || !issueDescription || !contactInfo) {
+                showNotification('❌ Пожалуйста, заполните все обязательные поля', 'error');
+                return;
+            }
+            
+            const message = `🆕 Новая заявка в поддержку ОКУ\n\n` +
+                           `👤 Имя: ${userName || 'Не указано'}\n` +
+                           `📱 Telegram: ${contactInfo}\n` +
+                           `📋 Тип проблемы: ${issueType}\n` +
+                           `⏰ Время: ${new Date().toLocaleString('ru-RU')}\n\n` +
+                           `📝 Описание:\n${issueDescription}`;
+            
+            navigator.clipboard.writeText(message).then(() => {
+                showNotification('✅ Текст заявки скопирован! Теперь напишите @OKU_support в Telegram и вставьте его');
+                window.open('https://t.me/OKU_support', '_blank');
+                
+                document.getElementById('issue-type').value = '';
+                document.getElementById('issue-description').value = '';
+                document.getElementById('contact-info').value = '';
+                document.getElementById('user-name').value = '';
+            });
+        }
+
+        function openSupportModal() {
+            document.getElementById('supportModal').style.display = 'block';
+        }
+
+        function closeSupportModal() {
+            document.getElementById('supportModal').style.display = 'none';
+        }
+
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const content = element.nextElementSibling;
+            
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-content').classList.remove('active');
+                }
+            });
+            
+            faqItem.classList.toggle('active');
+            content.classList.toggle('active');
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('supportModal');
+            if (event.target === modal) {
+                closeSupportModal();
+            }
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeSupportModal();
+            }
+        });
+    </script>
+</body>
+</html>
